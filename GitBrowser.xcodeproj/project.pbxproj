@@ -13,6 +13,8 @@
 		8880BE3F1517CC2C007F0A84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8880BE3D1517CC2C007F0A84 /* InfoPlist.strings */; };
 		8880BE411517CC2C007F0A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880BE401517CC2C007F0A84 /* main.m */; };
 		8880BE451517CC2C007F0A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880BE441517CC2C007F0A84 /* AppDelegate.m */; };
+		88B79E891517DBE1007E1D1E /* Example1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B79E871517DBE1007E1D1E /* Example1ViewController.m */; };
+		88B79E8A1517DBE1007E1D1E /* Example1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B79E881517DBE1007E1D1E /* Example1ViewController.xib */; };
 		88DDE9D61517D27500FBBD82 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DDE9CD1517D1D800FBBD82 /* libRestKit.a */; };
 		88DDE9D81517D29700FBBD82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DDE9D71517D29700FBBD82 /* CFNetwork.framework */; };
 		88DDE9DA1517D2A500FBBD82 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DDE9D91517D2A500FBBD82 /* CoreData.framework */; };
@@ -72,6 +74,9 @@
 		8880BE421517CC2C007F0A84 /* GitBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitBrowser-Prefix.pch"; sourceTree = "<group>"; };
 		8880BE431517CC2C007F0A84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8880BE441517CC2C007F0A84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88B79E861517DBE1007E1D1E /* Example1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example1ViewController.h; sourceTree = "<group>"; };
+		88B79E871517DBE1007E1D1E /* Example1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example1ViewController.m; sourceTree = "<group>"; };
+		88B79E881517DBE1007E1D1E /* Example1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Example1ViewController.xib; sourceTree = "<group>"; };
 		88DDE9C21517D1D800FBBD82 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Vendor/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		88DDE9D71517D29700FBBD82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		88DDE9D91517D2A500FBBD82 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -144,6 +149,9 @@
 			children = (
 				8880BE431517CC2C007F0A84 /* AppDelegate.h */,
 				8880BE441517CC2C007F0A84 /* AppDelegate.m */,
+				88B79E861517DBE1007E1D1E /* Example1ViewController.h */,
+				88B79E871517DBE1007E1D1E /* Example1ViewController.m */,
+				88B79E881517DBE1007E1D1E /* Example1ViewController.xib */,
 				8880BE3B1517CC2C007F0A84 /* Supporting Files */,
 			);
 			path = GitBrowser;
@@ -261,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8880BE3F1517CC2C007F0A84 /* InfoPlist.strings in Resources */,
+				88B79E8A1517DBE1007E1D1E /* Example1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +282,7 @@
 			files = (
 				8880BE411517CC2C007F0A84 /* main.m in Sources */,
 				8880BE451517CC2C007F0A84 /* AppDelegate.m in Sources */,
+				88B79E891517DBE1007E1D1E /* Example1ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
