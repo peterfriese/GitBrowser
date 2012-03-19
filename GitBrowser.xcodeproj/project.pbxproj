@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8880BE351517CC2C007F0A84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE341517CC2C007F0A84 /* UIKit.framework */; };
+		8880BE371517CC2C007F0A84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE361517CC2C007F0A84 /* Foundation.framework */; };
+		8880BE391517CC2C007F0A84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE381517CC2C007F0A84 /* CoreGraphics.framework */; };
+		8880BE3F1517CC2C007F0A84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8880BE3D1517CC2C007F0A84 /* InfoPlist.strings */; };
+		8880BE411517CC2C007F0A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880BE401517CC2C007F0A84 /* main.m */; };
+		8880BE451517CC2C007F0A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880BE441517CC2C007F0A84 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8880BE301517CC2C007F0A84 /* GitBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8880BE341517CC2C007F0A84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8880BE361517CC2C007F0A84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8880BE381517CC2C007F0A84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8880BE3C1517CC2C007F0A84 /* GitBrowser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitBrowser-Info.plist"; sourceTree = "<group>"; };
+		8880BE3E1517CC2C007F0A84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8880BE401517CC2C007F0A84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8880BE421517CC2C007F0A84 /* GitBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitBrowser-Prefix.pch"; sourceTree = "<group>"; };
+		8880BE431517CC2C007F0A84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8880BE441517CC2C007F0A84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8880BE2D1517CC2C007F0A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8880BE351517CC2C007F0A84 /* UIKit.framework in Frameworks */,
+				8880BE371517CC2C007F0A84 /* Foundation.framework in Frameworks */,
+				8880BE391517CC2C007F0A84 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8880BE251517CC2C007F0A84 = {
+			isa = PBXGroup;
+			children = (
+				8880BE3A1517CC2C007F0A84 /* GitBrowser */,
+				8880BE331517CC2C007F0A84 /* Frameworks */,
+				8880BE311517CC2C007F0A84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8880BE311517CC2C007F0A84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8880BE301517CC2C007F0A84 /* GitBrowser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8880BE331517CC2C007F0A84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8880BE341517CC2C007F0A84 /* UIKit.framework */,
+				8880BE361517CC2C007F0A84 /* Foundation.framework */,
+				8880BE381517CC2C007F0A84 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8880BE3A1517CC2C007F0A84 /* GitBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				8880BE431517CC2C007F0A84 /* AppDelegate.h */,
+				8880BE441517CC2C007F0A84 /* AppDelegate.m */,
+				8880BE3B1517CC2C007F0A84 /* Supporting Files */,
+			);
+			path = GitBrowser;
+			sourceTree = "<group>";
+		};
+		8880BE3B1517CC2C007F0A84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8880BE3C1517CC2C007F0A84 /* GitBrowser-Info.plist */,
+				8880BE3D1517CC2C007F0A84 /* InfoPlist.strings */,
+				8880BE401517CC2C007F0A84 /* main.m */,
+				8880BE421517CC2C007F0A84 /* GitBrowser-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8880BE2F1517CC2C007F0A84 /* GitBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8880BE481517CC2C007F0A84 /* Build configuration list for PBXNativeTarget "GitBrowser" */;
+			buildPhases = (
+				8880BE2C1517CC2C007F0A84 /* Sources */,
+				8880BE2D1517CC2C007F0A84 /* Frameworks */,
+				8880BE2E1517CC2C007F0A84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitBrowser;
+			productName = GitBrowser;
+			productReference = 8880BE301517CC2C007F0A84 /* GitBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8880BE271517CC2C007F0A84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = peterfriese.de;
+			};
+			buildConfigurationList = 8880BE2A1517CC2C007F0A84 /* Build configuration list for PBXProject "GitBrowser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8880BE251517CC2C007F0A84;
+			productRefGroup = 8880BE311517CC2C007F0A84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8880BE2F1517CC2C007F0A84 /* GitBrowser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8880BE2E1517CC2C007F0A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8880BE3F1517CC2C007F0A84 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8880BE2C1517CC2C007F0A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8880BE411517CC2C007F0A84 /* main.m in Sources */,
+				8880BE451517CC2C007F0A84 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8880BE3D1517CC2C007F0A84 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8880BE3E1517CC2C007F0A84 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8880BE461517CC2C007F0A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8880BE471517CC2C007F0A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8880BE491517CC2C007F0A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitBrowser/GitBrowser-Prefix.pch";
+				INFOPLIST_FILE = "GitBrowser/GitBrowser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8880BE4A1517CC2C007F0A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitBrowser/GitBrowser-Prefix.pch";
+				INFOPLIST_FILE = "GitBrowser/GitBrowser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8880BE2A1517CC2C007F0A84 /* Build configuration list for PBXProject "GitBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8880BE461517CC2C007F0A84 /* Debug */,
+				8880BE471517CC2C007F0A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8880BE481517CC2C007F0A84 /* Build configuration list for PBXNativeTarget "GitBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8880BE491517CC2C007F0A84 /* Debug */,
+				8880BE4A1517CC2C007F0A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8880BE271517CC2C007F0A84 /* Project object */;
+}
