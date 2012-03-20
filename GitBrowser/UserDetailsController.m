@@ -12,7 +12,7 @@
 @interface UserDetailsController ()
 {
     RKObjectMapping *objectMapping;
-    RKObjectManager* manager;
+    RKObjectManager *objectManager;
 }
 
 - (QRootElement *)createUserDetailsForm;
@@ -23,35 +23,55 @@
 @implementation UserDetailsController
 
 @synthesize userName = _userName;
+@synthesize protocol;
 
 -(id)init
 {
     self = [super initWithRoot:[self createUserDetailsForm]];
-
-    // define mapping from JSON / XML data structures to object structure
-    objectMapping = [RKObjectMapping mappingForClass:[GithubUser class]];
-    [objectMapping mapKeyPath:@"user.id" toAttribute:@"id"];
-    [objectMapping mapKeyPath:@"user.name" toAttribute:@"name"];
-    [objectMapping mapKeyPath:@"user.company" toAttribute:@"company"];
-    [objectMapping mapKeyPath:@"user.location" toAttribute:@"location"];    
-    [objectMapping mapKeyPath:@"user.blog" toAttribute:@"blog"];        
-    [objectMapping mapKeyPath:@"user.following-count" toAttribute:@"following"];   
-    [objectMapping mapKeyPath:@"user.followers-count" toAttribute:@"followers"];       
-    [objectMapping mapKeyPath:@"user.email" toAttribute:@"email"];           
-    
-    manager = [RKObjectManager objectManagerWithBaseURL:@"http://github.com"];
-    
     return self;
+}
+
+- (RKObjectMapping *)mapping
+{
+    if (objectMapping == nil) {
+        // define mapping from JSON / XML data structures to object structure
+        objectMapping = [RKObjectMapping mappingForClass:[GithubUser class]];
+        [objectMapping mapKeyPath:@"user.id" toAttribute:@"id"];
+        [objectMapping mapKeyPath:@"user.name" toAttribute:@"name"];
+        [objectMapping mapKeyPath:@"user.company" toAttribute:@"company"];
+        [objectMapping mapKeyPath:@"user.location" toAttribute:@"location"];    
+        [objectMapping mapKeyPath:@"user.blog" toAttribute:@"blog"];        
+        [objectMapping mapKeyPath:@"user.email" toAttribute:@"email"];           
+
+        // some attributes have slightly different names in XML than in JSON
+        if ([protocol isEqualToString:@"xml"]) {
+            [objectMapping mapKeyPath:@"user.following-count" toAttribute:@"following"];   
+            [objectMapping mapKeyPath:@"user.followers-count" toAttribute:@"followers"];               
+        }
+        else {
+            [objectMapping mapKeyPath:@"user.following_count" toAttribute:@"following"];   
+            [objectMapping mapKeyPath:@"user.followers_count" toAttribute:@"followers"];               
+        }
+    }
+    return objectMapping;
+}
+
+- (id)manager
+{
+    if (objectManager == nil) {
+        objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://github.com"];    
+    }
+    return objectManager;
+
 }
 
 - (void)setUserName:(NSString *)userName
 {
     _userName = userName;
     
-    
     // fetch the specified user from Github
-    [manager loadObjectsAtResourcePath:[NSString stringWithFormat:@"api/v2/xml/user/show/%@", userName] 
-                         objectMapping:objectMapping 
+    [self.manager loadObjectsAtResourcePath:[NSString stringWithFormat:@"api/v2/%@/user/show/%@", protocol, userName] 
+                         objectMapping:self.mapping
                               delegate:self];
 }
 

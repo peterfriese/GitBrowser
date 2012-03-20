@@ -29,11 +29,18 @@
     
     // User Details: fetch and map XML data
     UserDetailsController *userDetails = [[UserDetailsController alloc] init];
+    userDetails.protocol = @"xml";
     [userDetails setUserName:@"octocat"];
+    
+    // User Details: fetch and map XML data
+    UserDetailsController *userDetailsWitjJSON = [[UserDetailsController alloc] init];
+    userDetailsWitjJSON.protocol = @"json";
+    [userDetailsWitjJSON setUserName:@"peterfriese"];
+    
     
     // Set up tab bar
     tabbarController = [[UITabBarController alloc] init];
-    [tabbarController setViewControllers:[NSArray arrayWithObjects:example1, userDetails, nil]];    
+    [tabbarController setViewControllers:[NSArray arrayWithObjects:example1, userDetails, userDetailsWitjJSON, nil]];    
     [self.window addSubview:tabbarController.view];
     
     [self.window makeKeyAndVisible];

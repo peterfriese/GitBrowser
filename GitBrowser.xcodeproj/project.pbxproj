@@ -158,6 +158,8 @@
 		8870A9BB15191C8C0034FAD7 /* Example 2 - Fetch and map XML */ = {
 			isa = PBXGroup;
 			children = (
+				888465A015180A0700A9FE48 /* GithubUser.h */,
+				888465A115180A0800A9FE48 /* GithubUser.m */,
 				8884659D1518013A00A9FE48 /* UserDetailsController.h */,
 				8884659E1518013A00A9FE48 /* UserDetailsController.m */,
 			);
@@ -210,8 +212,6 @@
 				8870A9BA15191C310034FAD7 /* Example 1 - Fetch a file */,
 				8870A9BB15191C8C0034FAD7 /* Example 2 - Fetch and map XML */,
 				8880BE3B1517CC2C007F0A84 /* Supporting Files */,
-				888465A015180A0700A9FE48 /* GithubUser.h */,
-				888465A115180A0800A9FE48 /* GithubUser.m */,
 			);
 			path = GitBrowser;
 			sourceTree = "<group>";

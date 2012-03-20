@@ -9,5 +9,6 @@
 @interface UserDetailsController : QuickDialogController<RKObjectLoaderDelegate>
 
 @property (strong, nonatomic) NSString *userName;
+@property (strong, nonatomic) NSString *protocol;
 
 @end
