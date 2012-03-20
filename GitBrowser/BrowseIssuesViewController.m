@@ -1,48 +1,54 @@
 //
-//  BrowseReposViewController.m
+//  BrowseIssuesViewController.m
 //  GitBrowser
 //
-//  Created by Peter Friese on 20.03.12.
+//  Created by Peter Friese on 21.03.12.
 //  Copyright (c) 2012 peterfriese.de. All rights reserved.
 //
 
-#import "BrowseReposViewController.h"
-#import "GithubRepo.h"
 #import "BrowseIssuesViewController.h"
+#import "GithubIssue.h"
 
-@interface BrowseReposViewController ()
+@interface BrowseIssuesViewController ()
 {
     RKObjectMapping *objectMapping;
-    NSArray *repos;
+    NSArray *issues;
 }
 @end
 
-@implementation BrowseReposViewController
+@implementation BrowseIssuesViewController
+
+@synthesize repositoryUrl;
 
 - (RKObjectMapping *)mapping
 {
     if (objectMapping == nil) {
         // define mapping from JSON data structure to object structure
-        objectMapping = [RKObjectMapping mappingForClass:[GithubRepo class]];
+        objectMapping = [RKObjectMapping mappingForClass:[GithubIssue class]];
         [objectMapping mapKeyPath:@"url" toAttribute:@"url"];
-        [objectMapping mapKeyPath:@"name" toAttribute:@"name"];
-        [objectMapping mapKeyPath:@"description" toAttribute:@"description"];
-        [objectMapping mapKeyPath:@"private" toAttribute:@"private"];
-        [objectMapping mapKeyPath:@"open_issues" toAttribute:@"open_issues"];
+        [objectMapping mapKeyPath:@"number" toAttribute:@"number"];
+        [objectMapping mapKeyPath:@"state" toAttribute:@"state"];
+        [objectMapping mapKeyPath:@"title" toAttribute:@"title"];
+        [objectMapping mapKeyPath:@"body" toAttribute:@"body"];
     }
     return objectMapping;    
 }
 
+- (NSString *)resourcePath
+{
+    return [NSString stringWithFormat:@"%@/issues", repositoryUrl];
+}
+
 - (void)fetchData
 {
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/users/peterfriese/repos" 
-                                                  objectMapping:[self mapping] 
-                                                       delegate:self];
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:[self resourcePath]
+                                                 objectMapping:[self mapping] 
+                                                      delegate:self];
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects
 {
-    repos = objects;
+    issues = objects;
     [self.tableView reloadData];
 }
 
@@ -51,12 +57,13 @@
     NSLog(@"Encountered an error: %@", error);
 }
 
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.title = @"Repositories";
     }
     return self;
 }
@@ -89,7 +96,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [repos count];
+    return [issues count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,13 +104,12 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
-    GithubRepo *repo = (GithubRepo *)[repos objectAtIndex:[indexPath row]];
-    cell.textLabel.text = repo.name;
-    cell.detailTextLabel.text = repo.open_issues;
+    GithubIssue *issue = (GithubIssue *)[issues objectAtIndex:[indexPath row]];
+    cell.textLabel.text = issue.title;
     
     return cell;
 }
@@ -112,11 +118,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GithubRepo *repo = (GithubRepo *)[repos objectAtIndex:[indexPath row]];
-    
-    BrowseIssuesViewController *issuesViewController = [[BrowseIssuesViewController alloc] init];
-    issuesViewController.repositoryUrl = repo.url;
-    [self.navigationController pushViewController:issuesViewController animated:YES];
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
 }
 
 @end

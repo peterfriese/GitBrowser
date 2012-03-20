@@ -40,8 +40,8 @@
     
     // Browse repos
     BrowseReposViewController *browseViewController = [[BrowseReposViewController alloc] init];
-    browseViewController.tabBarItem.title = @"Browse";
-    
+    UINavigationController *browseReposNavigationController = [[UINavigationController alloc] initWithRootViewController:browseViewController];
+    browseReposNavigationController.tabBarItem.title = @"Browse";
     
     // Set up tab bar
     tabbarController = [[UITabBarController alloc] init];
@@ -49,7 +49,7 @@
                                           example1, 
                                           userDetails, 
                                           userDetailsWitjJSON, 
-                                          browseViewController, 
+                                          browseReposNavigationController, 
                                           nil]];    
     [self.window addSubview:tabbarController.view];
     

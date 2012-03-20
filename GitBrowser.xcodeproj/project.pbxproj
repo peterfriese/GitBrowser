@@ -10,6 +10,7 @@
 		8870A9BE15192C1E0034FAD7 /* GithubIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8870A9BD15192C1E0034FAD7 /* GithubIssue.m */; };
 		8870A9C115192E580034FAD7 /* GithubRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8870A9C015192E580034FAD7 /* GithubRepo.m */; };
 		8870A9C5151931520034FAD7 /* BrowseReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8870A9C4151931520034FAD7 /* BrowseReposViewController.m */; };
+		8870A9D415194BE60034FAD7 /* BrowseIssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8870A9D315194BE60034FAD7 /* BrowseIssuesViewController.m */; };
 		8880BE351517CC2C007F0A84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE341517CC2C007F0A84 /* UIKit.framework */; };
 		8880BE371517CC2C007F0A84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE361517CC2C007F0A84 /* Foundation.framework */; };
 		8880BE391517CC2C007F0A84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE381517CC2C007F0A84 /* CoreGraphics.framework */; };
@@ -99,6 +100,8 @@
 		8870A9C015192E580034FAD7 /* GithubRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubRepo.m; sourceTree = "<group>"; };
 		8870A9C3151931520034FAD7 /* BrowseReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseReposViewController.h; sourceTree = "<group>"; };
 		8870A9C4151931520034FAD7 /* BrowseReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseReposViewController.m; sourceTree = "<group>"; };
+		8870A9D215194BE60034FAD7 /* BrowseIssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseIssuesViewController.h; sourceTree = "<group>"; };
+		8870A9D315194BE60034FAD7 /* BrowseIssuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseIssuesViewController.m; sourceTree = "<group>"; };
 		8880BE301517CC2C007F0A84 /* GitBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8880BE341517CC2C007F0A84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8880BE361517CC2C007F0A84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +187,8 @@
 				8870A9C015192E580034FAD7 /* GithubRepo.m */,
 				8870A9C3151931520034FAD7 /* BrowseReposViewController.h */,
 				8870A9C4151931520034FAD7 /* BrowseReposViewController.m */,
+				8870A9D215194BE60034FAD7 /* BrowseIssuesViewController.h */,
+				8870A9D315194BE60034FAD7 /* BrowseIssuesViewController.m */,
 			);
 			name = "Example 3 - Routes";
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 				8870A9BE15192C1E0034FAD7 /* GithubIssue.m in Sources */,
 				8870A9C115192E580034FAD7 /* GithubRepo.m in Sources */,
 				8870A9C5151931520034FAD7 /* BrowseReposViewController.m in Sources */,
+				8870A9D415194BE60034FAD7 /* BrowseIssuesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
