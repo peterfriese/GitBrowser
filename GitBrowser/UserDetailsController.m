@@ -56,13 +56,12 @@
     return objectMapping;
 }
 
-- (id)manager
+- (RKObjectManager *)manager
 {
     if (objectManager == nil) {
-        objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://github.com"];    
+        objectManager = [RKObjectManager objectManagerWithBaseURL:@"https://github.com"];
     }
     return objectManager;
-
 }
 
 - (void)setUserName:(NSString *)userName
@@ -70,9 +69,10 @@
     _userName = userName;
     
     // fetch the specified user from Github
-    [self.manager loadObjectsAtResourcePath:[NSString stringWithFormat:@"api/v2/%@/user/show/%@", protocol, userName] 
-                         objectMapping:self.mapping
-                              delegate:self];
+    [[self manager] loadObjectsAtResourcePath:[NSString stringWithFormat:@"api/v2/%@/user/show/%@",
+                                                                protocol, userName] 
+                                                 objectMapping:self.mapping
+                                                      delegate:self];
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects 

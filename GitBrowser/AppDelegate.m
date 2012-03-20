@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UserDetailsController.h"
+#import "BrowseReposViewController.h"
 
 @implementation AppDelegate
 
@@ -15,13 +16,13 @@
 @synthesize tabbarController;
 
 @synthesize window = _window;
+@synthesize manager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // Setup RestKit client
-    [RKClient clientWithBaseURL:@"http://github.com"];
+    [RKObjectManager objectManagerWithBaseURL:@"https://api.github.com"];
     
     // Example 1: fetch Octocat image
     example1 = [[Example1ViewController alloc] init];
@@ -37,10 +38,19 @@
     userDetailsWitjJSON.protocol = @"json";
     [userDetailsWitjJSON setUserName:@"peterfriese"];
     
+    // Browse repos
+    BrowseReposViewController *browseViewController = [[BrowseReposViewController alloc] init];
+    browseViewController.tabBarItem.title = @"Browse";
+    
     
     // Set up tab bar
     tabbarController = [[UITabBarController alloc] init];
-    [tabbarController setViewControllers:[NSArray arrayWithObjects:example1, userDetails, userDetailsWitjJSON, nil]];    
+    [tabbarController setViewControllers:[NSArray arrayWithObjects:
+                                          example1, 
+                                          userDetails, 
+                                          userDetailsWitjJSON, 
+                                          browseViewController, 
+                                          nil]];    
     [self.window addSubview:tabbarController.view];
     
     [self.window makeKeyAndVisible];

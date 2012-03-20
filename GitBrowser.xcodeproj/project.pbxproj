@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8870A9BE15192C1E0034FAD7 /* GithubIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8870A9BD15192C1E0034FAD7 /* GithubIssue.m */; };
+		8870A9C115192E580034FAD7 /* GithubRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8870A9C015192E580034FAD7 /* GithubRepo.m */; };
+		8870A9C5151931520034FAD7 /* BrowseReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8870A9C4151931520034FAD7 /* BrowseReposViewController.m */; };
 		8880BE351517CC2C007F0A84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE341517CC2C007F0A84 /* UIKit.framework */; };
 		8880BE371517CC2C007F0A84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE361517CC2C007F0A84 /* Foundation.framework */; };
 		8880BE391517CC2C007F0A84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8880BE381517CC2C007F0A84 /* CoreGraphics.framework */; };
@@ -90,6 +93,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8870A9BC15192C1E0034FAD7 /* GithubIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubIssue.h; sourceTree = "<group>"; };
+		8870A9BD15192C1E0034FAD7 /* GithubIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubIssue.m; sourceTree = "<group>"; };
+		8870A9BF15192E580034FAD7 /* GithubRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubRepo.h; sourceTree = "<group>"; };
+		8870A9C015192E580034FAD7 /* GithubRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubRepo.m; sourceTree = "<group>"; };
+		8870A9C3151931520034FAD7 /* BrowseReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseReposViewController.h; sourceTree = "<group>"; };
+		8870A9C4151931520034FAD7 /* BrowseReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseReposViewController.m; sourceTree = "<group>"; };
 		8880BE301517CC2C007F0A84 /* GitBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8880BE341517CC2C007F0A84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8880BE361517CC2C007F0A84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -166,6 +175,19 @@
 			name = "Example 2 - Fetch and map XML";
 			sourceTree = "<group>";
 		};
+		8870A9C2151930A90034FAD7 /* Example 3 - Routes */ = {
+			isa = PBXGroup;
+			children = (
+				8870A9BC15192C1E0034FAD7 /* GithubIssue.h */,
+				8870A9BD15192C1E0034FAD7 /* GithubIssue.m */,
+				8870A9BF15192E580034FAD7 /* GithubRepo.h */,
+				8870A9C015192E580034FAD7 /* GithubRepo.m */,
+				8870A9C3151931520034FAD7 /* BrowseReposViewController.h */,
+				8870A9C4151931520034FAD7 /* BrowseReposViewController.m */,
+			);
+			name = "Example 3 - Routes";
+			sourceTree = "<group>";
+		};
 		8880BE251517CC2C007F0A84 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +233,7 @@
 				8880BE441517CC2C007F0A84 /* AppDelegate.m */,
 				8870A9BA15191C310034FAD7 /* Example 1 - Fetch a file */,
 				8870A9BB15191C8C0034FAD7 /* Example 2 - Fetch and map XML */,
+				8870A9C2151930A90034FAD7 /* Example 3 - Routes */,
 				8880BE3B1517CC2C007F0A84 /* Supporting Files */,
 			);
 			path = GitBrowser;
@@ -372,6 +395,9 @@
 				88B79E891517DBE1007E1D1E /* Example1ViewController.m in Sources */,
 				8884659F1518013A00A9FE48 /* UserDetailsController.m in Sources */,
 				888465A215180A0800A9FE48 /* GithubUser.m in Sources */,
+				8870A9BE15192C1E0034FAD7 /* GithubIssue.m in Sources */,
+				8870A9C115192E580034FAD7 /* GithubRepo.m in Sources */,
+				8870A9C5151931520034FAD7 /* BrowseReposViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,5 +14,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) Example1ViewController *example1;
 @property (strong, nonatomic) UITabBarController *tabbarController;
+@property (strong, nonatomic) RKObjectManager *manager;
 
 @end
