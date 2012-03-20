@@ -13,11 +13,11 @@
 @end
 
 @implementation Example1ViewController
+
 @synthesize imageView;
 
 - (IBAction)forkYou:(id)sender {
     [[RKClient sharedClient] get:@"https://github.com/fluidicon.png" delegate:self];
-    
 }
 
 - (void)request:(RKRequest *)request didLoadResponse:(RKResponse *)response

@@ -145,6 +145,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8870A9BA15191C310034FAD7 /* Example 1 - Fetch a file */ = {
+			isa = PBXGroup;
+			children = (
+				88B79E861517DBE1007E1D1E /* Example1ViewController.h */,
+				88B79E871517DBE1007E1D1E /* Example1ViewController.m */,
+				88B79E881517DBE1007E1D1E /* Example1ViewController.xib */,
+			);
+			name = "Example 1 - Fetch a file";
+			sourceTree = "<group>";
+		};
+		8870A9BB15191C8C0034FAD7 /* Example 2 - Fetch and map XML */ = {
+			isa = PBXGroup;
+			children = (
+				8884659D1518013A00A9FE48 /* UserDetailsController.h */,
+				8884659E1518013A00A9FE48 /* UserDetailsController.m */,
+			);
+			name = "Example 2 - Fetch and map XML";
+			sourceTree = "<group>";
+		};
 		8880BE251517CC2C007F0A84 = {
 			isa = PBXGroup;
 			children = (
@@ -188,11 +207,8 @@
 			children = (
 				8880BE431517CC2C007F0A84 /* AppDelegate.h */,
 				8880BE441517CC2C007F0A84 /* AppDelegate.m */,
-				88B79E861517DBE1007E1D1E /* Example1ViewController.h */,
-				88B79E871517DBE1007E1D1E /* Example1ViewController.m */,
-				88B79E881517DBE1007E1D1E /* Example1ViewController.xib */,
-				8884659D1518013A00A9FE48 /* UserDetailsController.h */,
-				8884659E1518013A00A9FE48 /* UserDetailsController.m */,
+				8870A9BA15191C310034FAD7 /* Example 1 - Fetch a file */,
+				8870A9BB15191C8C0034FAD7 /* Example 2 - Fetch and map XML */,
 				8880BE3B1517CC2C007F0A84 /* Supporting Files */,
 				888465A015180A0700A9FE48 /* GithubUser.h */,
 				888465A115180A0800A9FE48 /* GithubUser.m */,

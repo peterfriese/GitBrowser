@@ -10,8 +10,15 @@
 #import "GithubUser.h"
 
 @interface UserDetailsController ()
+{
+    RKObjectMapping *objectMapping;
+    RKObjectManager* manager;
+}
+
 - (QRootElement *)createUserDetailsForm;
+
 @end
+
 
 @implementation UserDetailsController
 
@@ -20,14 +27,9 @@
 -(id)init
 {
     self = [super initWithRoot:[self createUserDetailsForm]];
-    return self;
-}
 
-- (void)setUserName:(NSString *)userName
-{
-    _userName = userName;
-    
-    RKObjectMapping *objectMapping = [RKObjectMapping mappingForClass:[GithubUser class]];
+    // define mapping from JSON / XML data structures to object structure
+    objectMapping = [RKObjectMapping mappingForClass:[GithubUser class]];
     [objectMapping mapKeyPath:@"user.id" toAttribute:@"id"];
     [objectMapping mapKeyPath:@"user.name" toAttribute:@"name"];
     [objectMapping mapKeyPath:@"user.company" toAttribute:@"company"];
@@ -37,24 +39,39 @@
     [objectMapping mapKeyPath:@"user.followers-count" toAttribute:@"followers"];       
     [objectMapping mapKeyPath:@"user.email" toAttribute:@"email"];           
     
-    RKObjectManager* manager = [RKObjectManager objectManagerWithBaseURL:@"http://github.com"];
+    manager = [RKObjectManager objectManagerWithBaseURL:@"http://github.com"];
+    
+    return self;
+}
+
+- (void)setUserName:(NSString *)userName
+{
+    _userName = userName;
+    
+    
+    // fetch the specified user from Github
     [manager loadObjectsAtResourcePath:[NSString stringWithFormat:@"api/v2/xml/user/show/%@", userName] 
                          objectMapping:objectMapping 
                               delegate:self];
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects 
+{
+    // we're only interested in the first result (there should be only one reuslt, anyway)
     GithubUser *user = [objects objectAtIndex:0];
-    NSLog(@"Loaded User IDName: %@, Company: %@", user.name, user.company);
-    [self.root bindToObject:user];
     
-
+    // bind to QuickDialog UI
+    [self.root bindToObject:user];
 }
 
-- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error 
+{
     NSLog(@"Encountered an error: %@", error);
 }
 
+/**
+ * Build QuickDialog UI
+ */
 - (QRootElement *)createUserDetailsForm 
 {
     QRootElement *root = [[QRootElement alloc] init];
@@ -64,24 +81,6 @@
     
     QSection *main = [[QSection alloc] init];
     main.headerImage = @"logo";
-    
-//    <user>
-//    <name>The Octocat</name>
-//    <company>GitHub</company>
-//    <gravatar-id>7ad39074b0584bc555d0417ae3e7d974</gravatar-id>
-//    <location>San Francisco</location>
-//    <created-at type="datetime">2011-01-25T10:44:36-08:00</created-at>
-//    <blog>http://www.github.com/blog</blog>
-//    <public-gist-count type="integer">4</public-gist-count>
-//    <public-repo-count type="integer">3</public-repo-count>
-//    <following-count type="integer">0</following-count>
-//    <id type="integer">583231</id>
-//    <permission nil="true"></permission>
-//    <type>User</type>
-//    <followers-count type="integer">135</followers-count>
-//    <login>octocat</login>
-//    <email>octocat@github.com</email>
-//    </user>    
     
     QLabelElement *name = [[QLabelElement alloc] init];
     name.title = @"Name";
@@ -124,8 +123,7 @@
     email.key = @"email";
     email.bind = @"value:email";
     [main addElement:email];
-    
-    
+     
     [root addSection:main];
     
     return root;
