@@ -1,3 +1,6 @@
 [submodule "Vendor/RestKit"]
 	path = Vendor/RestKit
 	url = git://github.com/RestKit/RestKit.git
+[submodule "Vendor/QuickDialog"]
+	path = Vendor/QuickDialog
+	url = git@github.com:escoz/QuickDialog.git

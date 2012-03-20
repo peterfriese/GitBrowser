@@ -13,6 +13,11 @@
 		8880BE3F1517CC2C007F0A84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8880BE3D1517CC2C007F0A84 /* InfoPlist.strings */; };
 		8880BE411517CC2C007F0A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880BE401517CC2C007F0A84 /* main.m */; };
 		8880BE451517CC2C007F0A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880BE441517CC2C007F0A84 /* AppDelegate.m */; };
+		888465981517FBBE00A9FE48 /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 888465951517FB9F00A9FE48 /* libQuickDialog.a */; };
+		8884659A1517FCAD00A9FE48 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888465991517FCAD00A9FE48 /* MapKit.framework */; };
+		8884659C1517FCBA00A9FE48 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8884659B1517FCBA00A9FE48 /* CoreLocation.framework */; };
+		8884659F1518013A00A9FE48 /* UserDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884659E1518013A00A9FE48 /* UserDetailsController.m */; };
+		888465A215180A0800A9FE48 /* GithubUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 888465A115180A0800A9FE48 /* GithubUser.m */; };
 		88B79E891517DBE1007E1D1E /* Example1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B79E871517DBE1007E1D1E /* Example1ViewController.m */; };
 		88B79E8A1517DBE1007E1D1E /* Example1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88B79E881517DBE1007E1D1E /* Example1ViewController.xib */; };
 		88DDE9D61517D27500FBBD82 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DDE9CD1517D1D800FBBD82 /* libRestKit.a */; };
@@ -26,6 +31,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		888465921517FB9F00A9FE48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 888465891517FB9F00A9FE48 /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D80B0E3313E052DF00FA85CA;
+			remoteInfo = QuickDialogExample;
+		};
+		888465941517FB9F00A9FE48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 888465891517FB9F00A9FE48 /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C542393145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
+		888465961517FBB400A9FE48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 888465891517FB9F00A9FE48 /* QuickDialog.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C542392145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
 		88DDE9CC1517D1D800FBBD82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88DDE9C21517D1D800FBBD82 /* RestKit.xcodeproj */;
@@ -74,6 +100,13 @@
 		8880BE421517CC2C007F0A84 /* GitBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitBrowser-Prefix.pch"; sourceTree = "<group>"; };
 		8880BE431517CC2C007F0A84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8880BE441517CC2C007F0A84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		888465891517FB9F00A9FE48 /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = Vendor/QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
+		888465991517FCAD00A9FE48 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8884659B1517FCBA00A9FE48 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8884659D1518013A00A9FE48 /* UserDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsController.h; sourceTree = "<group>"; };
+		8884659E1518013A00A9FE48 /* UserDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsController.m; sourceTree = "<group>"; };
+		888465A015180A0700A9FE48 /* GithubUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubUser.h; sourceTree = "<group>"; };
+		888465A115180A0800A9FE48 /* GithubUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubUser.m; sourceTree = "<group>"; };
 		88B79E861517DBE1007E1D1E /* Example1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example1ViewController.h; sourceTree = "<group>"; };
 		88B79E871517DBE1007E1D1E /* Example1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example1ViewController.m; sourceTree = "<group>"; };
 		88B79E881517DBE1007E1D1E /* Example1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Example1ViewController.xib; sourceTree = "<group>"; };
@@ -92,6 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8884659C1517FCBA00A9FE48 /* CoreLocation.framework in Frameworks */,
+				8884659A1517FCAD00A9FE48 /* MapKit.framework in Frameworks */,
+				888465981517FBBE00A9FE48 /* libQuickDialog.a in Frameworks */,
 				88DDE9E41517D2D800FBBD82 /* libxml2.dylib in Frameworks */,
 				88DDE9E21517D2CA00FBBD82 /* QuartzCore.framework in Frameworks */,
 				88DDE9E01517D2C300FBBD82 /* SystemConfiguration.framework in Frameworks */,
@@ -112,6 +148,7 @@
 		8880BE251517CC2C007F0A84 = {
 			isa = PBXGroup;
 			children = (
+				888465891517FB9F00A9FE48 /* QuickDialog.xcodeproj */,
 				88DDE9C21517D1D800FBBD82 /* RestKit.xcodeproj */,
 				8880BE3A1517CC2C007F0A84 /* GitBrowser */,
 				8880BE331517CC2C007F0A84 /* Frameworks */,
@@ -131,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				88DDE9E31517D2D800FBBD82 /* libxml2.dylib */,
+				8884659B1517FCBA00A9FE48 /* CoreLocation.framework */,
+				888465991517FCAD00A9FE48 /* MapKit.framework */,
 				88DDE9E11517D2CA00FBBD82 /* QuartzCore.framework */,
 				88DDE9DF1517D2C300FBBD82 /* SystemConfiguration.framework */,
 				88DDE9DD1517D2B900FBBD82 /* Security.framework */,
@@ -152,7 +191,11 @@
 				88B79E861517DBE1007E1D1E /* Example1ViewController.h */,
 				88B79E871517DBE1007E1D1E /* Example1ViewController.m */,
 				88B79E881517DBE1007E1D1E /* Example1ViewController.xib */,
+				8884659D1518013A00A9FE48 /* UserDetailsController.h */,
+				8884659E1518013A00A9FE48 /* UserDetailsController.m */,
 				8880BE3B1517CC2C007F0A84 /* Supporting Files */,
+				888465A015180A0700A9FE48 /* GithubUser.h */,
+				888465A115180A0800A9FE48 /* GithubUser.m */,
 			);
 			path = GitBrowser;
 			sourceTree = "<group>";
@@ -166,6 +209,15 @@
 				8880BE421517CC2C007F0A84 /* GitBrowser-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8884658A1517FB9F00A9FE48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				888465931517FB9F00A9FE48 /* QuickDialogExample.app */,
+				888465951517FB9F00A9FE48 /* libQuickDialog.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		88DDE9C31517D1D800FBBD82 /* Products */ = {
@@ -193,6 +245,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				888465971517FBB400A9FE48 /* PBXTargetDependency */,
 				88DDE9D51517D25600FBBD82 /* PBXTargetDependency */,
 			);
 			name = GitBrowser;
@@ -221,6 +274,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 8884658A1517FB9F00A9FE48 /* Products */;
+					ProjectRef = 888465891517FB9F00A9FE48 /* QuickDialog.xcodeproj */;
+				},
+				{
 					ProductGroup = 88DDE9C31517D1D800FBBD82 /* Products */;
 					ProjectRef = 88DDE9C21517D1D800FBBD82 /* RestKit.xcodeproj */;
 				},
@@ -233,6 +290,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		888465931517FB9F00A9FE48 /* QuickDialogExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = QuickDialogExample.app;
+			remoteRef = 888465921517FB9F00A9FE48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		888465951517FB9F00A9FE48 /* libQuickDialog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQuickDialog.a;
+			remoteRef = 888465941517FB9F00A9FE48 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		88DDE9CD1517D1D800FBBD82 /* libRestKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -283,12 +354,19 @@
 				8880BE411517CC2C007F0A84 /* main.m in Sources */,
 				8880BE451517CC2C007F0A84 /* AppDelegate.m in Sources */,
 				88B79E891517DBE1007E1D1E /* Example1ViewController.m in Sources */,
+				8884659F1518013A00A9FE48 /* UserDetailsController.m in Sources */,
+				888465A215180A0800A9FE48 /* GithubUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		888465971517FBB400A9FE48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickDialog;
+			targetProxy = 888465961517FBB400A9FE48 /* PBXContainerItemProxy */;
+		};
 		88DDE9D51517D25600FBBD82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RestKit;
@@ -358,7 +436,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitBrowser/GitBrowser-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/Vendor/RestKit/Build\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SOURCE_ROOT)/Vendor/RestKit/Build\"",
+					"\"${PROJECT_DIR}/Vendor/QuickDialog\"",
+				);
 				INFOPLIST_FILE = "GitBrowser/GitBrowser-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -374,7 +455,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitBrowser/GitBrowser-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/Vendor/RestKit/Build\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SOURCE_ROOT)/Vendor/RestKit/Build\"",
+					"\"${PROJECT_DIR}/Vendor/QuickDialog\"",
+				);
 				INFOPLIST_FILE = "GitBrowser/GitBrowser-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
